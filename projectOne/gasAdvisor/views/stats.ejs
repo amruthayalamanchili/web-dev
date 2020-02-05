@@ -1,0 +1,45 @@
+<% include ./partials/header.ejs %>
+
+    <div class = "jumbotron bg-info" id = "jumbocolor">
+        <h1 class = "display-4 text-right text-light"> My Vehicles</h1>
+        </div>
+        <div class = "container">
+       <div class = "shadow-lg card" style = "width:22rem">
+           <div class = "card-body">
+               
+               <form action = "profile/stats" method = "post">
+                  <div class="form-group">
+                        <select class="form-control my-2" id="year" >
+                            <option>Select Year</option>
+                            <option>2020</option>
+                            <option>2019</option>
+                            <option>2018</option>
+                            <option>2017</option>
+                        </select>
+                        <select class="form-control my-2" id="make">
+                            <option> Select Make</option>
+                            <option>Acura</option>
+                            <option>Nissan</option>
+                            <option>Audi</option>
+                            <option>Bugati</option>
+                        </select>
+                        <select class="form-control my-2" id="model">
+                            <option>Select Model</option>
+                            <option>chiron</option>
+                            <option>eb10</option>
+                            <option>altima</option>
+                        </select>
+                        <button class = " shadow-lg form-control btn btn-outline-warning border-warning">Add Vehicle</button>
+
+                   </form>
+           </div>
+            
+                
+       </div> 
+       
+            
+            
+            
+    </div>
+
+<% include ./partials/footer.ejs %>

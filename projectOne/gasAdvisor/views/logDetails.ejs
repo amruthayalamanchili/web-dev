@@ -1,0 +1,163 @@
+<% include ./partials/header.ejs %>
+<div class = "container">
+    <div class = "jumbotron bg-info">
+        <h1 class = "display-4 text-right text-light">Enter your log</h1>
+    </div>
+    <div class = "p-2 row align-items-start">
+        <div class = "col-md-3">
+            <label for = "date"class = "lead">Date</label>
+            <div class = "card" >
+                <div class = "card-header bg-info">
+                    <div class = "row">
+                        <div id = "month" class = " pr-5 col-md-6 font-weight-bold"> </div>
+                       
+                        <div id = "year"class = "text-right col-md-6 font-weight-bold"></div>
+                    </div>
+                </div>
+                <div class = "card-body ">
+                     <div id = "demo" class = " h2 text-center font-weight-bold"></div>
+                </div>
+                <div id = "day" class = "text-center card-footer"></div>
+            </div>
+                </div>
+                <div class = "col-md-9">
+                    <label for = "station"class = "lead">Station</label>
+                    <div class = "bg-light card">
+                        <div class = "text-center  h5 card-body">
+                            <hr>
+                            <p class = "card-text text-muted">No stations added</p>
+                            <a href = "#" >Tap to add station</a>
+                            <hr class = "mb-4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class = " form-row d-inline align-self-start">
+                <form action = "/addprice" method = "POST">
+                <div class = "card rounded bg-light col-md-2 ">
+                    <img src = "https://www.bing.com/th?id=OIP.HLmujwffZ5mU5wZklwAjsAHaHa&pid=Api&rs=1" class = "card-img-top rounded-circle img-thumbnail" size = "50px">
+                    <div class = "card-body">
+                        <select class = "custom-select" name = "gas[type]">
+                        <option value = "regular">Regular</option>
+                        <option value = "midgrade">Midgrade</option>
+                        <option value = "premium">Premium</option>
+                        <option value = "diesel">Diesel</option>
+                        </select>
+                        <select class = "custom-select" name = "gas[units]">
+                            <option value = "gallons">Gallons</option>
+                            <option value = "litres">Litres</option>
+                        </select>
+                    </div>
+                </div>
+                
+                
+    <!--            <ul class = "list-group list-group-flush ">-->
+    <!--    <li class = "list-group-item ">-->
+    <!--        <div class="row">-->
+    <!--        <div class="col-6">Price per Gallon</div>-->
+    <!--        <div class="col-6">-->
+    <!--                <div class ="input-group-prepend">-->
+    <!--                        <span class="input-group-text font-weight-bold" >$</span>-->
+    <!--                    <input type = "number" class = "form-control border-0" name = "gas[price]"></div>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+                      
+                
+    <!--    </li>-->
+    <!--    <li class = "list-group-item ">-->
+    <!--        <div class="row">-->
+    <!--            <div class="col-6">Total-Price</div>-->
+    <!--            <div class="col-6">-->
+    <!--                        <div class = "input-group-append">-->
+    <!--                             <span class="input-group-text font-weight-bold" >$</span>-->
+    <!--                                <input type = "number" class = "form-control border-0" name = "gas[total]">-->
+                                    <!--<a class = "btn btn-outline-info" href = "#">Calculate</a>-->
+    <!--                                </div>-->
+    <!--                        </div>  -->
+    <!--                    </div>        -->
+                    
+    <!--        </li>-->
+    <!--        <li class = "list-group-item ">-->
+    <!--            <div class="row">-->
+    <!--                <div class="col-6">Calculated Gallons</div>-->
+    <!--                <div class="col-6">-->
+    <!--                        <div class ="input-group-prepend">-->
+    <!--                                <span class="input-group-text font-weight-bold" >$</span>-->
+    <!--                            <input type = "number" class = "form-control border-0" name = "gas[calc]"></div>-->
+    <!--                            </div> -->
+    <!--                        </div>         -->
+                        
+    <!--            </li>-->
+    <!--            <li class = "list-group-item">-->
+    <!--                        <input type = "submit" class = "btn btn-outline-success" value = "Add Log">-->
+    <!--            </li>-->
+    <!--</ul>-->
+    <!--               </form>-->
+    <!--            </div>-->
+    <!--</div>-->
+                 
+                <div class = "mt-3 py-2 col-md-8 input-group offset-md-3">
+                    <div class = "row">
+                        <div class = "col-md-4">
+                           <label for = "price"class = "lead">Price per Gallon</label> 
+                        </div>
+                    <div class="col-md-8 ">
+                        <div class ="input-group-prepend">
+                        <span class="input-group-text font-weight-bold" >$</span>
+                    <input type = "number" class = "form-control" name = "gas[price]"></div>
+                    </div>
+                    </div>
+                    
+                </div>
+                
+                <div class = "mt-3 py-2 col-md-8 input-group offset-md-3">
+                    <div class = "row">
+                        <div class = "col-md-4">
+                    <label for = "total"class = "lead">Total-price</label>
+                    </div>
+                    <div class="col-md-8">
+                        <div class = "input-group-append">
+                            <span class="input-group-text font-weight-bold" >$</span>
+                    <input type = "number" class = "form-control" name = "gas[total]">
+                    <!--<a class = "btn btn-outline-info" href = "/addprice">Calculate</a>-->
+                    </div>
+                    
+                    </div>
+                </div>
+                </div>
+                
+                <div class = "mt-3  py-2 col-md-8 input-group offset-md-3">
+                    <div class = "row">
+                    <div class = "col-md-4">
+                    <label for = "calc"class = "lead">Calculated-Gallons</label>
+                    </div>
+                     <div class="col-md-8">
+                         <div class =  "input-group-append">
+                         <input type ="number" class="form-control"  name = "gas[calc]">
+                        <span class="input-group-text" >Gallons/Litres</span>
+                     </div>
+                     </div>
+                </div>
+                </div>
+                <div class = "row mt-3">
+                    <div class = "offset-md-6 col-md-4 ">
+                        <input type = "submit" class = "btn btn-md btn-success offset-md-1" value = "Add Log">
+                        <input type = "submit" class = "btn btn-md btn-danger offset-md-1" value = "Cancel">
+                    </div>
+                </div>
+                </form>
+                </div>
+                </div>
+ 
+<script>
+var d = new Date();
+document.getElementById("demo").innerHTML = d.getDate();
+var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+document.getElementById("month").innerHTML = months[d.getMonth()];
+var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+document.getElementById("day").innerHTML = days[d.getDay()];
+document.getElementById("year").innerHTML = d.getFullYear();
+</script>
+
+<% include ./partials/footer.ejs %>

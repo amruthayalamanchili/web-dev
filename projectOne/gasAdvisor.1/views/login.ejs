@@ -1,0 +1,40 @@
+<% include ./partials/header.ejs %>
+<div class = "container-fluid">
+ <div class = "row">
+        <div class = "col-md-8 p-4">
+<div class = "border container rounded" id = "userblock">
+    <h1 class = "text-center text-white">Login to explore</h1>
+    <form action = "/login" method = "post">
+    <div class = "input-group form-group">
+        <div class = "input-group-prepend">
+            <span class = "input-group-text"><i class="fas fa-user"></i></span>
+            <input class = "form-control" type = "text" name = "username" placeholder = "abcdefg">
+        </div>
+        
+    </div>
+    <div class = "input-group form-group">
+        <div class = "input-group-prepend">
+            <span class = "input-group-text"><i class="fas fa-key"></i></span>
+            <input class = "form-control" type = "password" name = "password" placeholder = "************">
+        </div>
+        
+    </div>
+    <div class = "form-group">
+        <input class = "btn btn-primary btn-block" type = "submit" value = "signIn">
+    </div>
+    <div class = "form-group">
+        <h4 class = "text-center text-white">Not a member?<a class = "btn btn-link" href = "/register">signUp</a></h4>
+    </div>
+</form>
+</div>
+</div>
+  <div class = "col-md-4">
+            <img src = "https://www.bing.com/th?id=OIP.-vgV2DjZQl26ZD5cTU2e5AHaE8&pid=Api&rs=1" width = 400px class = "shadow-lg rounded-circle">
+        </div>
+    </div>
+    </div>
+
+
+
+
+<% include ./partials/footer.ejs %>

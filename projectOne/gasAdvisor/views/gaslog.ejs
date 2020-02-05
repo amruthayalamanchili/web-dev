@@ -1,0 +1,24 @@
+<% include ./partials/header.ejs %>
+
+    <div class = " jumbotron bg-info" id = "jumbocolor">
+    <h1 class = "display-4"> My Audi</h1>
+        <p class = "lead text-light">Fuel Log</p>
+        <button class = "btn btn-info" onclick = "document.getElementById('log').style.display = 'block'">View Log details</button>
+        <a class = "btn btn-info" href = "/logDetails">Add Fuel Log</a>
+</div>
+<div class = "container">
+<div id = "log" class = "card" style = "display:none">
+    <div class = "card-body">
+        <div class = "row">
+            <div class = "col-md-6"><p class = "lead text-warning ">Last MPG = 1.3</p></div>
+            
+            <div class = "col-md-6"><p class = "lead text-warning">Best MPG = 1.3</p></div>
+        </div>
+        
+    </div>
+</div>
+</div>
+
+
+
+<% include partials/footer.ejs %>

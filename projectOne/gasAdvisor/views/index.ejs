@@ -1,0 +1,57 @@
+<% include partials/header.ejs %>
+
+ <div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+    <li data-target="#demo" data-slide-to="3"></li>
+    <li data-target="#demo" data-slide-to="4"></li>
+  </ul>
+ 
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://c1.staticflickr.com/9/8818/17989457845_931207ccc0_b.jpg" alt="shell" width="900" height="700">
+    </div>
+    <div class="carousel-item">
+      <img src="https://www.bp.com/content/dam/bp-country/en_au/products-services/procurement/Brightly-lit-forecourt.jpg" alt="bp" width="900" height="700">
+    </div>
+    <div class="carousel-item">
+      <img src="http://studio460.com/images/chevronv800.jpg" alt = "chevron" width = "900" height = "700">
+      </div>
+      <div class="carousel-item">
+      <img src="http://fuelsandlubes.com/wp-content/uploads/2016/07/Mobil-Synergy-Station-Night.jpg" alt = "exon" width = "900" height = "700">
+      </div>
+      <div class="carousel-item">
+      <img src="https://gladstonebuild.com/wp-content/uploads/2017/01/2226.jpg" alt = "racetrac" width = "900" height = "700">
+      </div>
+    <div class = "container">     
+       <form  action = "/search" method = "post">
+           <div class = "input-group mb-3 text-light p-5 ">
+              <div class = "h2">Find gas prices nearby ...</div>
+              <div class="input-group-append input-group-lg">
+           <input type = "text" class = "form-control" placeholder = "city,stations,stars etc.," >
+                <button class="btn btn-secondary" type="button" id="button-addon2">Find Gas</button>
+           </div>
+            <p class = "h2 p-5" >Today's gas price = $ 1.89/gallon</p>
+           </div>
+          
+       </form>
+   
+ </div>
+  </div>
+  </div>
+  </hr>
+ 
+ <script>
+      $('.carousel').carousel(
+  interval: 500;
+)
+ </script>
+
+ 
+
+
+<% include partials/footer.ejs %>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset ="UTF-8">
+        <meta name="viewport" content = "width = device-width,intial-scale = 1.0,shrink-to-fit = no">
+        <title>Home</title>
+        <!--Bootstrap Links-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <!--FontAwesome links-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <!--Font Links-->
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+        <!--local css-->
+         <link rel="stylesheet" type = "text/css" href="stylesheets/main.css">
+         
+        
+    </head>
+    <body>
+        <div class = "container">
+            <h1 class = "text-info">Calculate</h1>
+            <% result.forEach(function(result){ %>
+            <% result = result.a/result.b %>
+            <li ><%= result %></li>
+
+<% }); %>
+        <form action = "/sum" method = "post">
+            <div class = "form-group">
+          <input type = "number"  name = "numa" placeholder = "numa"> 
+          </div>
+          <div class = "form-group">
+          <input type = "number" name = "numb" placeholder = "numb"> 
+          </div>
+          
+          <div class = "form-group">
+          <input type = "submit" class = "btn btn-primary" value = "calculate">
+           <div class = "form-group">
+          </div>
+          </div>
+        </form>
+        <div>
+           
+           Your Result <%= result %>
+              
+          </div>
+         </div>
+         
+        </body>
+        </html>

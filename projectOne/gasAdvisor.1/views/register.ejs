@@ -1,0 +1,31 @@
+<% include ./partials/header.ejs %>
+<div class = "container-fluid">
+    <div class = "row">
+        <div class = "col-md-8">
+           <div class = "shadow-lg container rounded" id = "userblock">
+    <h4>Please enter your details here</h4>
+    <form action = "/register" method = "POST">
+          <div class = "form-group col-md-12">
+             <input class = "form-control" type = "text" name = "username" placeholder = "username">  
+           </div> 
+           <div class = "form-group col-md-12">
+             <input class = "form-control" type = "password" name = "password" placeholder = "************">            </div>
+          </div>
+         <div class = "form-group">
+                <button class = "btn btn-lg btn-primary btn-block">Sign Up</button>
+            </div>
+         
+        <div class = "form-group">
+            <h6>Already a member?<a  href = "/login">signIn</a></h6> 
+        </div>
+</form>
+</div> 
+        </div>
+        <div class = "col-md-4">
+            <img src = "https://www.bing.com/th?id=OIP.-vgV2DjZQl26ZD5cTU2e5AHaE8&pid=Api&rs=1" height = 400px class = "rounded-circle">
+        </div>
+    </div>
+    </div>
+    
+
+<% include ./partials/footer.ejs %>

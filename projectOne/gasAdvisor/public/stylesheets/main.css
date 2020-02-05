@@ -1,0 +1,28 @@
+/*body{*/
+/*    background-color: hsla(120, 100%, 85%, 0.1)  ;*/
+/*}*/
+#navbar-color{
+    font-family: 'Playfair Display', serif;
+    font-size:2rem;
+}
+ .carousel-inner img {
+      width: 100%;
+  }
+
+.jumbocolor{
+    background: linear-gradient(50deg, rgba(200,200,20,50%) 10%, rgba(100,120,40,0.6674019949776786) 35%, rgba(0,212,255,1) 100%);
+}
+
+.mydropdowncss:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; 
+}
+
+#userblock{
+    display:block;
+    width:60%;
+    margin:10%;
+}
+
+
+

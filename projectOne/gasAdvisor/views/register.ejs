@@ -1,0 +1,41 @@
+<% include ./partials/header.ejs %>
+<div class = "container-fluid">
+    <div class = "row">
+        <div class = "col-md-8">
+           <div class = "shadow-lg container rounded" id = "userblock">
+    <h4>Please enter your details here</h4>
+    <form action = "/signup" method = "post">
+    
+        <div class = "form-row">
+            <div class = "form-group col-md-12">   
+             <input class = "form-control" type = "email" name = "person[email]" placeholder = "abcd@example.com">
+           </div>
+           </div>
+           <div class = "form-row">
+          <div class = "form-group col-md-3">
+             <input class = "form-control" type = "text" name = "person[username]" placeholder = "username">  
+           </div> 
+           <div class = "form-group col-md-3">
+             <input class = "form-control" type = "password" name = "person[password]" placeholder = "************">  
+           </div>
+           <div class = "from-group col-md-6">
+               <input class = "form-control" type = "text" name = "person[zip]" placeholder = "zip code">
+           </div>
+        </div>
+        
+         <div class = "form-group">
+             <input class = "btn btn-primary btn-block" type = "submit" value = "signUp">
+         </div>
+        <div class = "form-group">
+            <h6>Already a member?<a class = "btn btn-link" href = "/login">signIn</a></h6> 
+        </div>
+</form>
+</div> 
+        </div>
+        <div class = "col-md-4">
+            <img src = "https://www.bing.com/th?id=OIP.-vgV2DjZQl26ZD5cTU2e5AHaE8&pid=Api&rs=1" height = 400px class = "rounded-circle">
+        </div>
+    </div>
+    </div>
+
+<% include ./partials/footer.ejs %>

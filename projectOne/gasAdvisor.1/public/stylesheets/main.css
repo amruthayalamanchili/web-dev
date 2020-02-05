@@ -1,0 +1,27 @@
+/*body{*/
+/*    background: dark; */
+/*}*/
+#navbar-color{
+    font-family: 'Playfair Display', serif;
+    font-size:2rem;
+    
+}
+ .carousel-inner img {
+      width: 100%;
+  }
+
+.mydropdowncss:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; 
+}
+
+#userblock{
+    display:block;
+    width:60%;
+    margin:10%;
+    font-family: 'Playfair Display', serif;
+    font-size:2rem;
+}
+
+
+
